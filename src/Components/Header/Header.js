@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import logo from '../../assets/images/logo.png'
 import Banner from './Banner'
 
@@ -16,7 +17,7 @@ const Header = () => {
                             <div className="collapse navbar-collapse" id="navbarNav">
                                 <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        <a className="nav-link" href="index.html">Inicio</a>
+                                        <NavLink  className="nav-link" to="/inicio">Inicio</NavLink>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link" href="about.html">Sobre Nosotros</a>
@@ -38,7 +39,7 @@ const Header = () => {
                         <div className="logo"><a href="index.html"><img src={logo} alt='Logo' /></a></div>
                         <div className="menu_main">
                             <ul>
-                                <li className="active"><a href="index.html">Inicio</a></li>
+                                <li><NavLink to="/inicio" className="active">Inicio</NavLink></li>
                                 <li><a href="about.html">Sobre Nosotros</a></li>
                                 <li><a href="services.html">Servicios</a></li>
                                 <li><a href="blog.html">Blog</a></li>
