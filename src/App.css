@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 /*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 
@@ -330,7 +330,7 @@ button {
 
 .header_main {
   width: 100%;
-  background-image: url('./assets/images/mobile-bg.png');
+  background-image: url("./assets/images/mobile-bg.png");
   background-size: 100%;
   padding: 10px 0px 0px 0px;
 }
@@ -454,6 +454,10 @@ button {
 .btn_main.active a {
   color: #ffffff;
   background-color: #000d10;
+}
+
+.cardEfect:hover {
+  transform: scale(1.1);
 }
 
 /* services section end */
@@ -1338,7 +1342,6 @@ button {
   }
   .banner_section {
     padding: 50px 0px;
-   
   }
   .services_section {
     padding: 50px 0px;
