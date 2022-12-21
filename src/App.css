@@ -328,12 +328,6 @@ button {
   float: left;
 }
 
-.header_main {
-  width: 100%;
-  background-image: url("./assets/images/mobile-bg.png");
-  background-size: 100%;
-  padding: 10px 0px 0px 0px;
-}
 
 /* header section end */
 
@@ -966,7 +960,8 @@ button {
   color: #ffffff;
 }
 
-.call_text a:hover {
+.call_text a:hover,
+.social_icons i:hover {
   color: #e27141;
 }
 
