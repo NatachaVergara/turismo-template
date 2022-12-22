@@ -15,7 +15,7 @@ const FooterSection = () => {
                     <div className="call_text"><i className="bi bi-telephone fs-2 "></i></div>
                     <div className="call_text"><a href="#">+54 1234567890</a></div>
                     <div className="call_text"><i className="bi bi-envelope-at fs-2"></i></div>
-                    <div className="call_text"><a href="#">turismo@gmail.com</a></div>
+                    <div className="call_text"><a href="#">a-world@gmail.com</a></div>
                 </div>
                 <div className="social_icon">
                     <ul>

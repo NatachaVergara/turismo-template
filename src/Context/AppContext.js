@@ -1,7 +1,5 @@
-import serviceImg2 from '../assets/images/img-1.png'
-import serviceImg1 from '../assets/images/img-2.png'
-import serviceImg3 from '../assets/images/img-3.png'
-import React, { createContext, useContext } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { serviciosDB, serviciosSectionDB } from '../utils/BASE_URL';
 
 //Esta constante es la que crea el context y la comparto en la linea 225 como TurismoContext.Provider
 const TurismoContext = createContext();
@@ -15,37 +13,47 @@ export const useContextApp = () => {
 
 
 const UseTurismoContextProvider = ({ children }) => {
-    const serviciosInfo = [
-        {
-            id: 1,
-            img: serviceImg1,
-            alt: "imagen de rafting",
-            linkText: "Rafting",
-            url: "#"
-        },
-        {
-            id: 2,
-            img: serviceImg2,
-            alt: "imagen de hiking",
-            linkText: "Hiking",
-            url: "#"
-        },
-        {
-            id: 3,
-            img: serviceImg3,
-            alt: "imagen de camping",
-            linkText: "Camping",
-            url: "#"
-        },
+    const [serviciosData, setServiciosData] = useState([])
+    const [serviciosDataSection, setServiciosDataSection] = useState([])
 
-    ]
+
+
+    useEffect(() => {
+        const getServicios = async () => {
+            fetch(serviciosDB)
+                .then(res => res.text())
+                .then(data => {
+                    const servicios = JSON.parse(data.substr(47).slice(0, -2));
+                    //console.log(servicios.table.rows)
+                    setServiciosData(servicios.table.rows)
+                })
+                .catch((e) => console.log(`Hubo un problema con la petición: ${e}`))
+        }
+        getServicios()
+
+
+        const getServiciosSection = async () => {
+            fetch(serviciosSectionDB)
+                .then(res => res.text())
+                .then(data => {
+                    const servicios = JSON.parse(data.substr(47).slice(0, -2));
+                    // console.log(servicios.table.rows)
+                    setServiciosDataSection(servicios.table.rows)
+
+                })
+
+        }
+        getServiciosSection()
+
+    }, [])
+
 
 
 
 
 
     return (
-        <TurismoContext.Provider value={{ serviciosInfo }}>
+        <TurismoContext.Provider value={{ serviciosData, serviciosDataSection }}>
             {children}
         </TurismoContext.Provider>
     )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo.png'
 
 
@@ -14,13 +14,13 @@ const NavMovile = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <NavLink className="nav-link" to="/inicio">Inicio</NavLink>
+                    <Link className="nav-link" to="/inicio">Inicio</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="about.html">Sobre Nosotros</a>
+                    <Link className="nav-link" to="/sobre">Sobre Nosotros</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="services.html">Servicios</a>
+                    <Link className="nav-link" to="/servicios">Servicios</Link>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link " href="blog.html">Blog</a>

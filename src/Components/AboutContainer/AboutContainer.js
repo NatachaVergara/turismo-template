@@ -2,10 +2,12 @@ import React from 'react'
 import aboutImg from '../../assets/images/about-img.png'
 import { Link } from 'react-router-dom'
 
-const AboutContainer = () => {
+const AboutContainer = ({ section }) => {
+
+
     return (
         // <!-- about section start -->
-        <div className="about_section layout_padding border-top border-dark">
+        <div className="about_section layout_padding border-top border-dark animate__animated animate__bounceInUp">
             <div className="container-fluid">
                 <div className="row d-flex flex-column-reverse  flex-md-row">
                     <div className="col-md-6">
@@ -15,7 +17,9 @@ const AboutContainer = () => {
                                 Tempore velit nesciunt hic vero adipisci asperiores similique ut dolorem soluta nulla corporis praesentium expedita repudiandae odit, earum at est ab pariatur magni ipsum facere voluptates. Reprehenderit accusantium doloribus sit.
                                 Quaerat molestias id dicta quas perferendis voluptates atque ipsam iusto neque dolorum fugit accusamus praesentium eaque nemo eum, reiciendis minima! Quos officiis, quo consectetur ad necessitatibus aut veniam eligendi recusandae!
                             </p>
-                            <div className="readmore_bt"><Link to="/">Leer más</Link></div>
+                            {
+                                section ? null : <div className="readmore_bt"><Link to="/sobre">Leer más</Link></div>
+                            }
                         </div>
                     </div>
                     <div className="col-md-6">

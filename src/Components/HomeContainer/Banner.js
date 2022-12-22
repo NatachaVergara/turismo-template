@@ -4,6 +4,7 @@ import React from 'react'
 const Banner = () => {
     return (
         //    {/* <!-- banner section start --> */}
+
         <div className="banner_section layout_padding">
             <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
@@ -31,6 +32,7 @@ const Banner = () => {
                 </div>
             </div>
         </div>
+
         // {/* <!-- banner section end --> */}
     )
 }

@@ -9,8 +9,8 @@ const NavExpand = () => {
             <div className="menu_main">
                 <ul>
                     <li><NavLink to="/inicio" className="active">Inicio</NavLink></li>
-                    <li><a href="about.html">Sobre Nosotros</a></li>
-                    <li><a href="services.html">Servicios</a></li>
+                    <li><NavLink to="/sobre">Sobre Nosotros</NavLink></li>
+                    <li><NavLink to="/servicios">Servicios</NavLink></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>

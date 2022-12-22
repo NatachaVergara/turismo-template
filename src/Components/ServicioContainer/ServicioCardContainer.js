@@ -3,17 +3,17 @@ import { useContextApp } from '../../Context/AppContext'
 import ServicioCard from './ServicioCard'
 
 const ServicioCardContainer = () => {
-    const { serviciosInfo } = useContextApp()
+    const { serviciosData } = useContextApp()
 
     return (
         <div className="services_section_2">
             <div className="row">
-                {serviciosInfo ?
-                    serviciosInfo.map((s, i) => (
-                        <ServicioCard props={s} key={i} />
+                {serviciosData ?
+                    serviciosData.map((s, i) => (
+                        <ServicioCard servicio={s.c} key={i} />
                     ))
                     :
-                    <h1>Cargando</h1>
+                    <h1>Cargando....</h1>
                 }
             </div>
         </div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Banner from './Banner'
 import NavExpand from './NavExpand'
 import NavMovile from './NavMovile'
 
@@ -11,11 +10,7 @@ const Header = () => {
                     <NavMovile />
                     <NavExpand />
                 </div>
-                <Banner />
             </div>
-
-
-
         </header>
     )
 }
