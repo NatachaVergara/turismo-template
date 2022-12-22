@@ -7,7 +7,7 @@ const ServicioSectionCard = ({ servicio }) => {
         <div className="card mb-3 mt-5" style={{ maxWidth: "540px" }}>
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={`http://drive.google.com/uc?export=view&id=${servicio[1].v}`} className="my-5 mx-1" alt={servicio[2].v} />
+                    <img src={`https://drive.google.com/uc?export=view&id=${servicio[1].v}`} className="my-5 mx-1" alt={servicio[2].v} />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
