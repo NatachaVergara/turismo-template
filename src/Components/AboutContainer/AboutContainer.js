@@ -7,7 +7,7 @@ const AboutContainer = ({ section }) => {
 
     return (
         // <!-- about section start -->
-        <div className="about_section layout_padding border-top border-dark animate__animated animate__bounceInUp">
+        <div className="about_section layout_padding border-top border-dark " data-aos="fade-left" >
             <div className="container-fluid">
                 <div className="row d-flex flex-column-reverse  flex-md-row">
                     <div className="col-md-6">

@@ -3,7 +3,7 @@ import ServicioContainer from '../Components/ServicioContainer'
 
 const Servicios = () => {
     return (
-        <main>
+        <main data-aos="fade-up">
             <ServicioContainer section={true} />
         </main>
     )

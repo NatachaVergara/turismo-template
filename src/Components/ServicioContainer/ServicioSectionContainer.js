@@ -7,7 +7,7 @@ const ServicioSectionContainer = () => {
 
 
     return (
-        <div className='container d-flex flex-wrap justify-content-between align-items-center'>
+        <div className='container d-flex flex-wrap justify-content-between align-items-center'  >
             {
                 serviciosDataSection && serviciosDataSection.map((servicio, i) => (
                     <ServicioSectionCard servicio={servicio.c} key={i} />

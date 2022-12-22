@@ -7,7 +7,7 @@ const ServicioContainer = ({ section }) => {
     return (
 
         // <!-- services section start -->
-        <div className="services_section layout_padding animate__animated animate__bounceInLeft">
+        <div className="services_section layout_padding " data-aos="fade-right">
             <div className="container">
                 <h1 className="services_taital">Servicios </h1>
                 <p className="services_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere ab exercitationem blanditiis libero ex quas eveniet! Officia quis earum accusamus architecto, illo, itaque maiores temporibus cum nostrum deserunt veritatis.
