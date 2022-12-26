@@ -5,7 +5,7 @@ const CardHome = ({ title, texto }) => {
 
 
     return (
-        <div className={styles.card}  >
+        <div className={styles.card}  data-aos="zoom-in" >
             <div className={styles.content}  >
                 <h2 className={styles.title} >{title} </h2>
                 <p className={styles.text} > {texto} </p>

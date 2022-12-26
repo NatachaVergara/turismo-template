@@ -10,7 +10,7 @@ const DestinosContainer = () => {
 
 
     return (
-        <div className='about_section layout_padding" data-aos="fade-left"'>
+        <div className='about_section layout_padding' data-aos="fade-left">
             <div className="container">
                 <div className="row d-flex flex-column-reverse flex-md-row">
                     <div className='about_taital_main p-3 p-md-none'>
