@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { createContext, useContext, useEffect } from 'react'
 import useJsCookies from '../Hooks/useCookies';
 import { serviciosDB, serviciosSectionDB } from '../utils/BASE_URL';
@@ -21,32 +22,34 @@ const UseTurismoContextProvider = ({ children }) => {
 
     useEffect(() => {
         const getServicios = async () => {
-            fetch(serviciosDB)
-                .then(res => res.text())
-                .then(data => {
-                    const servicios = JSON.parse(data.substr(47).slice(0, -2));
-                    //console.log(servicios.table.rows)
-                    setServiciosData(servicios.table.rows)
-                })
-                .catch((e) => console.log(`Hubo un problema con la petición: ${e}`))
+            try {
+                const response = await axios.get(serviciosDB)
+                const resText = await JSON.parse(response.data.substr(47).slice(0, -2));
+                const data = await resText.table.rows;
+                //console.log(data)
+                setServiciosData(data)
+            } catch (error) {
+                console.log(error)
+            }
         }
         getServicios()
 
 
         const getServiciosSection = async () => {
-            fetch(serviciosSectionDB)
-                .then(res => res.text())
-                .then(data => {
-                    const servicios = JSON.parse(data.substr(47).slice(0, -2));
-                    // console.log(servicios.table.rows)
-                    setServiciosDataSection(servicios.table.rows)
-
-                })
-
+            try {
+                const response = await axios.get(serviciosSectionDB)
+                const resText = await JSON.parse(response.data.substr(47).slice(0, -2));
+                const data = await resText.table.rows;
+                //console.log(data)
+                setServiciosDataSection(data)
+            } catch (error) {
+                console.log(error)
+            }
         }
         getServiciosSection()
 
-    }, [setServiciosData, setServiciosDataSection])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     const destinos = [
         {

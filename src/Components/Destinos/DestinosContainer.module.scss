@@ -95,15 +95,10 @@ $bp-lg: 800px;
 
     @each $img in $imagenes {
         $i: index($imagenes, $img);
-
         &:nth-child(#{$i}):before {
             background-image: $img
         }
     }
-
-
-
-
 }
 
 
