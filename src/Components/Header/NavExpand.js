@@ -11,7 +11,7 @@ const NavExpand = () => {
                     <li><NavLink to="/inicio" className="active">Inicio</NavLink></li>
                     <li><NavLink to="/sobre">Sobre Nosotros</NavLink></li>
                     <li><NavLink to="/servicios">Servicios</NavLink></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><NavLink to="/destinos">Destinos</NavLink></li>
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </div>

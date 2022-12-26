@@ -7,8 +7,8 @@ const AboutContainer = ({ section }) => {
 
     return (
         // <!-- about section start -->
-        <div className="about_section layout_padding border-top border-dark " data-aos="fade-left" >
-            <div className="container-fluid">
+        <div className="about_section layout_padding" data-aos="fade-left" >
+            <div className="container">
                 <div className="row d-flex flex-column-reverse  flex-md-row">
                     <div className="col-md-6">
                         <div className="about_taital_main p-3 p-md-none">
