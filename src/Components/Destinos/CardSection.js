@@ -9,7 +9,7 @@ const CardSection = ({ titulo, paises, img, id }) => {
 
     return (
 
-        <div className={`card my-5 mx-3 `} style={{ width: "30rem" }}>
+        <div className={`card my-5 mx-1 `} style={{ width: "20rem" }}>
             <img src={img} className="card-img-top" style={{ height: "20rem" }} alt="..." />
 
             <div className={`${styles.cardbody} card-body`} >
