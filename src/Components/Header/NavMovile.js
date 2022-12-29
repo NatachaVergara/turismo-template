@@ -23,10 +23,10 @@ const NavMovile = () => {
                             <Link className="nav-link" to="/servicios">Servicios</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link " href="blog.html">Destinos</a>
+                            <Link className="nav-link " to="/destinos">Destinos</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link " href="contact.html">Contacto</a>
+                            <Link className="nav-link " to="/inicio">Contacto</Link>
                         </li>
                     </ul>
                 </div>

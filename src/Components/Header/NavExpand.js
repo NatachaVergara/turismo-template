@@ -12,7 +12,7 @@ const NavExpand = () => {
                     <li><NavLink to="/sobre">Sobre Nosotros</NavLink></li>
                     <li><NavLink to="/servicios">Servicios</NavLink></li>
                     <li><NavLink to="/destinos">Destinos</NavLink></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><NavLink to="/inicio">Contacto</NavLink></li>
                 </ul>
             </div>
         </div>
