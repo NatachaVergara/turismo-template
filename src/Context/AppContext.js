@@ -2,6 +2,11 @@ import axios from 'axios';
 import React, { createContext, useContext, useEffect } from 'react'
 import useJsCookies from '../Hooks/useCookies';
 import { serviciosDB, serviciosSectionDB } from '../utils/BASE_URL';
+import africa from '../assets/images/africa.jpg'
+import america from '../assets/images/america.jpg'
+import asia from '../assets/images/asia.jpg'
+import europa from '../assets/images/europa.jpg'
+import oceania from '../assets/images/oceania.jpg'
 
 //Esta constante es la que crea el context y la comparto en la linea 225 como TurismoContext.Provider
 const TurismoContext = createContext();
@@ -55,31 +60,41 @@ const UseTurismoContextProvider = ({ children }) => {
         {
             id: 1,
             destino: 'África',
-            texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+            texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            paises: ['Egipto', 'Sudafrica', 'Marruecos', 'Madagascar', 'Costa de marfil'],
+            img: africa,
 
         },
         {
             id: 2,
             destino: 'América',
-            texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+            texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            paises: ['Chile', 'Uruguay', 'EEUU', 'México', 'Colombia', 'Brasil'],
+            img: america,
 
         },
         {
             id: 3,
             destino: 'Asia',
-            texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+            texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            paises: ['Corea del sur', 'Japón', 'China', 'Vietnam', 'Taiwan'],
+            img: asia,
 
         },
         {
             id: 4,
             destino: 'Europa',
-            texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+            texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            paises: ['España', 'Portugal', 'Francia', 'Inglaterra', 'Italia'],
+            img: europa,
 
         },
         {
             id: 5,
             destino: 'Oceanía',
-            texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+            texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            paises: ['Australia', 'Nueva Zelanda', 'Fiji', 'Papúa Nueva Guinea'],
+            img: oceania,
 
         },
 

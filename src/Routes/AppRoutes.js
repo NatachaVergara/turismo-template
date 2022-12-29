@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+
 import About from '../Views/About';
+import Destino from '../Views/Destino';
 import Destinos from '../Views/Destinos';
 import Error from '../Views/Error';
 import Home from '../Views/Home';
@@ -14,6 +16,7 @@ const AppRoutes = () => {
             <Route path='/sobre' element={<About />} />
             <Route path='/servicios' element={<Servicios />} />
             <Route path='/destinos' element={<Destinos />} />
+            <Route path='/destino/:pais' element={<Destino />} />
             <Route path='*' element={<Error />} />
         </Routes>
     )

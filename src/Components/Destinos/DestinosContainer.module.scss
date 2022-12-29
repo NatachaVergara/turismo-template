@@ -90,11 +90,9 @@ $bp-lg: 800px;
         transition: transform calc(var(--d) * 2) var(--e);
     }
 
-
-
-
     @each $img in $imagenes {
         $i: index($imagenes, $img);
+
         &:nth-child(#{$i}):before {
             background-image: $img
         }
@@ -122,7 +120,7 @@ $bp-lg: 800px;
     font-size: 1.3rem;
     font-weight: bold;
     line-height: 1.2;
-    color:aliceblue
+    color: aliceblue
 }
 
 .text {
@@ -183,4 +181,11 @@ $bp-lg: 800px;
         }
     }
 
+}
+
+/************************/
+/*Card section*/
+.cardbody ul li:hover {
+    cursor: default;
+    color: red;
 }
