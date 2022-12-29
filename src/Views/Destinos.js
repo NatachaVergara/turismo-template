@@ -13,10 +13,7 @@ const Destinos = () => {
             <h1>Destinos</h1>
             <div className=' d-flex flex-wrap justify-content-center'>
                 {destinos && destinos.map((d, i) => (
-
                     <CardSection key={i} titulo={d.destino} paises={d.paises} img={d.img} id={d.id} />
-
-
                 ))}
 
             </div>

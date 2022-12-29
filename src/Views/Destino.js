@@ -1,5 +1,5 @@
 import React from 'react'
-import DesctinoCard from '../Components/Destinos/DesctinoCard'
+import DesctinoCard from '../Components/Destinos/DestinoCard'
 
 const Destino = () => {
     return (

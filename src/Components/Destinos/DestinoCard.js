@@ -3,7 +3,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { gotoTop, title } from '../../utils/funciones'
 
-const DesctinoCard = () => {
+const DestinoCard = () => {
     const { pais } = useParams()
     gotoTop()
     title(pais)
@@ -39,4 +39,4 @@ const DesctinoCard = () => {
     )
 }
 
-export default DesctinoCard
+export default DestinoCard
