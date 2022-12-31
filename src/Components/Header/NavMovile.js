@@ -14,19 +14,19 @@ const NavMovile = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/inicio">Inicio</Link>
+                            <Link className="nav-link" to="/inicio" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Inicio</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/sobre">Sobre Nosotros</Link>
+                            <Link className="nav-link" to="/sobre" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Sobre Nosotros</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/servicios">Servicios</Link>
+                            <Link className="nav-link" to="/servicios" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Servicios</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link " to="/destinos">Destinos</Link>
+                            <Link className="nav-link " to="/destinos" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Destinos</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link " to="/inicio">Contacto</Link>
+                            <Link className="nav-link " to="/inicio" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contacto</Link>
                         </li>
                     </ul>
                 </div>
