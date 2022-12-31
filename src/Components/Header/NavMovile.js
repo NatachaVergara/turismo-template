@@ -1,9 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import logo from '../../assets/images/logo.png'
 
 
 const NavMovile = () => {
+    let navigate = useNavigate();
+    const onHandleClick = (to)=>{
+       navigate(to)
+    }
+    
+    
+    
     return (
         <div className="mobile_menu">
             <nav className="navbar navbar-expand-lg navbar-light">
@@ -14,19 +21,19 @@ const NavMovile = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/inicio" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Inicio</Link>
+                            <p className="nav-link" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onClick={()=> onHandleClick('/inicio')}>Inicio</p>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/sobre" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Sobre Nosotros</Link>
+                            <p className="nav-link" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"onClick={()=> onHandleClick('/sobre')} >Sobre Nosotros</p>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/servicios" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Servicios</Link>
+                            <p className="nav-link"data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"  onClick={()=> onHandleClick('/servicios')} >Servicios</p>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link " to="/destinos" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Destinos</Link>
+                            <p className="nav-link " data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onClick={()=> onHandleClick('/destinos')} >Destinos</p>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link " to="/inicio" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contacto</Link>
+                            <p className="nav-link " data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onClick={()=> onHandleClick('/inicio')} >Contacto</p>
                         </li>
                     </ul>
                 </div>
