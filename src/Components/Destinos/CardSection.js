@@ -19,7 +19,7 @@ const CardSection = ({ titulo, paises, img, id }) => {
                 <ul className="list-group list-group-flush" style={{ height: "15rem" }}>
                     {paises && paises.map((p, i) => (
                         <li key={i} className="list-group-item">
-                            <Link to={`/destino/${p}`}>{p}</Link>
+                            <Link to={`/destino/${p}`} className={styles} >{p}</Link>
                         </li>
 
                     ))}

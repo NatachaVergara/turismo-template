@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { createContext, useContext, useEffect } from 'react'
 import useJsCookies from '../Hooks/useCookies';
-import { serviciosDB, serviciosSectionDB } from '../utils/BASE_URL';
-import africa from '../assets/images/africa.jpg'
+import { africa_URL, serviciosDB, serviciosSectionDB } from '../utils/BASE_URL';
+import africaa from '../assets/images/africa.jpg'
 import america from '../assets/images/america.jpg'
 import asia from '../assets/images/asia.jpg'
 import europa from '../assets/images/europa.jpg'
@@ -22,6 +22,7 @@ export const useContextApp = () => {
 const UseTurismoContextProvider = ({ children }) => {
     const [serviciosData, setServiciosData] = useJsCookies('serviciosData', [], 7)
     const [serviciosDataSection, setServiciosDataSection] = useJsCookies('serviciosDataSection', [], 7)
+    const [africa, setAfrica] = useJsCookies('africa', []);
 
 
 
@@ -45,7 +46,7 @@ const UseTurismoContextProvider = ({ children }) => {
                 const response = await axios.get(serviciosSectionDB)
                 const resText = await JSON.parse(response.data.substr(47).slice(0, -2));
                 const data = await resText.table.rows;
-                //console.log(data)
+                console.log(data)
                 setServiciosDataSection(data)
             } catch (error) {
                 console.log(error)
@@ -53,8 +54,24 @@ const UseTurismoContextProvider = ({ children }) => {
         }
         getServiciosSection()
 
+        const getAfrica = async () => {
+            try {
+                const response = await axios.get(africa_URL)
+                const resText = await JSON.parse(response.data.substr(47).slice(0, -2));
+                const data = await resText.table.rows;
+                console.log(data)
+                setAfrica(data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        getAfrica()
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
+
+
 
     const destinos = [
         {
@@ -62,7 +79,7 @@ const UseTurismoContextProvider = ({ children }) => {
             destino: 'África',
             texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             paises: ['Egipto', 'Sudafrica', 'Marruecos', 'Madagascar', 'Costa de marfil'],
-            img: africa,
+            img: africaa,
 
         },
         {
@@ -104,7 +121,7 @@ const UseTurismoContextProvider = ({ children }) => {
 
 
     return (
-        <TurismoContext.Provider value={{ serviciosData, serviciosDataSection, destinos }}>
+        <TurismoContext.Provider value={{ serviciosData, serviciosDataSection, destinos, africa }}>
             {children}
         </TurismoContext.Provider>
     )

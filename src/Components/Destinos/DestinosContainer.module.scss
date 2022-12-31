@@ -185,7 +185,18 @@ $bp-lg: 800px;
 
 /************************/
 /*Card section*/
-.cardbody ul li:hover {
-    cursor: default;
-    color: red;
+.cardbody ul li a {
+    text-transform: uppercase;
+    color: black;
+    
+    &:visited{
+        color: black;
+    }
+
+    &:hover{
+        font-family: var(--font-serif);
+         font-style: italic;
+    }
+     
 }
+
